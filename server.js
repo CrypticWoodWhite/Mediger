@@ -3,7 +3,7 @@
 // *** Dependencies
 // =================================================
 var express = require("express");
-var session = require ("express-session");
+// var session = require ("express-session");
 var db = require ("./server/models");
 var rooms = require ("./server/routes/rooms");
 var patients = require ("./server/routes/patients");

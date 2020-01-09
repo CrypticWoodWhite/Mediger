@@ -2,10 +2,10 @@
   "name": "mediger",
   "version": "0.1.0",
   "private": true,
-  "main": "index.js",
+  "main": "server.js",
   "engines": {
-    "npm": "6.4.1",
-    "node": "10.15.2"
+    "npm": "^6.5",
+    "node": "^11.0.0"
   },
   "dependencies": {
     "concurrently": "^5.0.0",

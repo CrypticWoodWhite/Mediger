@@ -1,7 +1,7 @@
 import React from "react";
-import styles from './sideBarMenu.css';
+// import styles from './sideBarMenu.css';
 // import Glyphicon from 'react-bootstrap/lib/Glyphicon';
-import { Nav, NavItem, Navbar, NavDropdown, DropdownItem, Col, Row, Container } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import CompanyInfoForm from '../CompanyInfoForm'
 

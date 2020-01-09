@@ -1,5 +1,5 @@
 import React , { Component } from "react";
-import { Form, Button, FormGroup,Col,Card } from 'react-bootstrap';
+import { Form, Button,Col,Card } from 'react-bootstrap';
 import "./style.css";
 
 class CompanyInfoForm extends Component {

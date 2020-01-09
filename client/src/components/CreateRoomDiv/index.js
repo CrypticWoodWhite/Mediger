@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import './style.css';
-import config from '../../config';
+// import config from '../../config';
 // import Glyphicon from 'react-bootstrap/lib/Glyphicon';
-import { Nav, NavItem, Navbar, NavDropdown, DropdownItem, Card } from 'react-bootstrap';
+import { Navbar, Card } from 'react-bootstrap';
 import { Form, Button } from 'react-bootstrap';
 import { NavLink, Link } from 'react-router-dom';
 import Table from 'react-bootstrap/Table'

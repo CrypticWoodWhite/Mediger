@@ -50,9 +50,9 @@ app.use('/api/notes/', notes);
 
 
 // Middleware for errors
-app.use((req, res) => {
-	res.status(404).json({ errors: { global: "Still working on it. Please try again later when we implement it." } });
-});
+// app.use((req, res) => {
+// 	res.status(404).json({ errors: { global: "Still working on it. Please try again later when we implement it." } });
+// });
 
 // Sync database with Sequelize models
 db.sequelize.sync().then(function() {

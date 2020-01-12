@@ -11,6 +11,7 @@ var patients = require ("./routes/patients");
 var orgUsers = require ("./routes/orgUsers");
 var organizations = require ("./routes/organizations");
 var notes = require ("./routes/notes");
+require("dotenv").config();
 
 // Sets up the Express App
 // ================================================
@@ -41,7 +42,7 @@ app.use('/api/organization/', organizations);
 app.use('/api/notes/', notes);
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "./build/index.html"));
+    res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 // Sync database with Sequelize models

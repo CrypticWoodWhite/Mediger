@@ -29,7 +29,7 @@ app.use(express.json());
 app.use(cors());
 
 // Static directory
-app.use(express.static(__dirname + "client/public/build"));
+app.use(express.static(__dirname + "client/public"));
 
 // Routes // ========================================================
 app.use('/api/room/', rooms);

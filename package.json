@@ -62,5 +62,6 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kylanchilders/Mediger/issues"
-  }
+  },
+  "homepage": "https://mediger-ag.herokuapp.com/"
 }

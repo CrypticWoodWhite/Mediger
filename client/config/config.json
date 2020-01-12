@@ -18,7 +18,6 @@
     "operatorsAliases": false
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
     "username": "unxrk0uspb87e4zr",
     "password": "zhoftmky9ilsf13n",
     "database": "s1fvx7mvjsu0wh7t",

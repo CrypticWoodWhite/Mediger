@@ -27,7 +27,7 @@ app.use(function(req, res, next) {
   });
 
 // Static directory
-app.use(express.static("client/public"));
+app.use(express.static(__dirname + "client/public"));
 
 // Routes // ========================================================
 app.use('/api/room/', rooms);

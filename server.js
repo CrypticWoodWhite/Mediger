@@ -2,6 +2,7 @@
 // Server.js - This file is the initial starting point for the Node/Express server.
 // *** Dependencies
 // =================================================
+var path = require("path");
 var express = require("express");
 var cors = require("cors");
 var db = require ("./models");
@@ -30,6 +31,10 @@ app.use(cors());
 
 // Static directory
 app.use(express.static(__dirname + "client/build"));
+app.get('*', function (req, res) {
+	const index = path.join(__dirname, 'build', 'index.html');
+	res.sendFile(index);
+  });
 
 // Routes // ========================================================
 app.use('/api/room/', rooms);

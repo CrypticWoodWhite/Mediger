@@ -3,6 +3,7 @@
 // *** Dependencies
 // =================================================
 var express = require("express");
+var cors = require("cors");
 var db = require ("./models");
 var rooms = require ("./routes/rooms");
 var patients = require ("./routes/patients");
@@ -19,15 +20,16 @@ var PORT = process.env.PORT || 3010;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(function(req, res, next) {
-	res.header("Access-Control-Allow-Origin", "*");
-	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-	res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
-	next();
-  });
+// app.use(function(req, res, next) {
+// 	res.header("Access-Control-Allow-Origin", "*");
+// 	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+// 	res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
+// 	next();
+//   });
+app.use(cors());
 
 // Static directory
-app.use(express.static(__dirname + "client/public"));
+app.use(express.static(__dirname + "client/public/build"));
 
 // Routes // ========================================================
 app.use('/api/room/', rooms);

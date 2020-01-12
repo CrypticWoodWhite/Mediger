@@ -30,8 +30,8 @@ app.use(express.json());
 app.use(cors());
 
 // Static directory
-app.use(express.static(__dirname + "client/build"));
-app.get('*', function (req, res) {
+app.use(express.static(__dirname + "build"));
+app.get('/', function (req, res) {
 	const index = path.join(__dirname, 'build', 'index.html');
 	res.sendFile(index);
   });

@@ -11,10 +11,10 @@ const appName = {
   color: 'darkBlue',
 
 };
-const logoSize ={
-  height:'40px',
-  width:'40px',
-}
+// const logoSize ={
+//   height:'40px',
+//   width:'40px',
+// }
 const borderToLink={
 
   color:'white',
@@ -22,12 +22,12 @@ const borderToLink={
 }
 const Header = () => {
    
-  const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const { loginWithRedirect } = useAuth0();
 
-  const logoutWithRedirect = () =>
-    logout({
-      returnTo: window.location.origin
-    });
+  // const logoutWithRedirect = () =>
+  //   logout({
+  //     returnTo: window.location.origin
+  //   });
     return(
 <Navbar className="nb" expand="lg">
   <Navbar.Brand href="/" style={appName}><h1>Mediger</h1></Navbar.Brand>

@@ -32,7 +32,7 @@ app.use(cors());
 
 // Static directory
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static("../build"));
+    app.use(express.static("app/build"));
 }
 // Routes // ========================================================
 app.use('/api/room/', rooms);
@@ -42,7 +42,7 @@ app.use('/api/organization/', organizations);
 app.use('/api/notes/', notes);
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../build", "index.html"));
+    res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 // Sync database with Sequelize models

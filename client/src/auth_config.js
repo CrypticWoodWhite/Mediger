@@ -1,6 +1,8 @@
 require("dotenv").config();
 
-module.exports = {
+const config = {
   domain: process.env.AUTH0DOMAIN,
   clientId: process.env.AUTH0ID
 }
+
+module.exports = config;

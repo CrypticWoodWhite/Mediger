@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { Auth0Provider } from "./react-auth0-spa";
-import config from "./auth_config.js";
+import config from "./auth_config";
 import history from "./utils/history";
 
 const onRedirectCallback = appState => {
@@ -19,6 +19,7 @@ ReactDOM.render(
   <Auth0Provider
     domain={config.domain}
     client_id={config.clientId}
+    client_secret={config.clientSecret}
     // redirect_uri={window.location.origin}
     redirect_uri={"https://mediger-ag.herokuapp.com/Admin"}
     onRedirectCallback={onRedirectCallback}

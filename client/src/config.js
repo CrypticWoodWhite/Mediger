@@ -2,7 +2,7 @@
 const configGlob = {};
 // production specific config goes here
 const configProd = {
-  API_URI: "http://www.example.com/api/v2"
+  API_URI: "https://dev-d3hshq97.auth0.com/api/v2/"
 };
 // development specific config goes here
 const configDev = {
@@ -10,5 +10,5 @@ const configDev = {
 };
 
 // merged config
-const config = { ...configDev };
+const config = { ...configProd };
 export default config;

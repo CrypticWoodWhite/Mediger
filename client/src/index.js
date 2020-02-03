@@ -20,6 +20,7 @@ ReactDOM.render(
     domain={config.domain}
     client_id={config.clientId}
     audience={config.audience}
+    client_secret={config.clientSecret}
     redirect_uri={"/Admin"}
     onRedirectCallback={onRedirectCallback}
   >

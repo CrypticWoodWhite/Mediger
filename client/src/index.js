@@ -21,7 +21,7 @@ ReactDOM.render(
     client_id={config.clientId}
     audience={config.audience}
     client_secret={config.clientSecret}
-    redirect_uri={"/Admin"}
+    redirect_uri={"https://mediger-ag.herokuapp.com/Admin"}
     onRedirectCallback={onRedirectCallback}
   >
     <App />

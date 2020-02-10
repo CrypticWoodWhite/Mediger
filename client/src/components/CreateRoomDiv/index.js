@@ -31,7 +31,7 @@ class CreateRoomDiv extends Component {
   componentDidMount() {
 
 
-    fetch("http://localhost:3010/api/room/room", {
+    fetch("/api/room/room", {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
 
@@ -63,7 +63,7 @@ class CreateRoomDiv extends Component {
     console.log(this.state.Name)
     console.log(this.state.orgID)
 
-    fetch("http://localhost:3010/api/room/createRoom", {
+    fetch("/api/room/createRoom", {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -76,7 +76,7 @@ class CreateRoomDiv extends Component {
 
   }
   deleteRoom = id => {
-    fetch("http://localhost:3010/api/room/" + id, {
+    fetch("/api/room/" + id, {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
 

@@ -41,7 +41,7 @@ class FrontDeskForm extends Component {
     console.log(this.state)
 
 
-    fetch("http://localhost:3010/api/patient/", {
+    fetch("/api/patient/", {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

@@ -30,7 +30,7 @@ class PatientDiv extends Component {
 
 
     componentDidMount() {
-        fetch("http://localhost:3010/api/patient/", {
+        fetch("/api/patient/", {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
 
@@ -43,19 +43,19 @@ class PatientDiv extends Component {
 
     }
     deletePatient = (id, roomID) => {
-        fetch("http://localhost:3010/api/patient/" + id, {
+        fetch("/api/patient/" + id, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' },
 
         })
 
-        fetch("http://localhost:3010/api/notes/patient/" + id, {
+        fetch("/api/notes/patient/" + id, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' },
 
         })
 
-        fetch("http://localhost:3010/api/room", {
+        fetch("/api/room", {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

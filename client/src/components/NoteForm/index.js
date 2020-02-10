@@ -26,7 +26,7 @@ class NoteForm extends Component {
     handleSubmit(event) {
       event.preventDefault();
       console.log(this.props.match.params.id)
-      fetch("http://localhost:3010/api/notes/" + this.props.match.params.id, {
+      fetch("/api/notes/" + this.props.match.params.id, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

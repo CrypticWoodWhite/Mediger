@@ -21,7 +21,7 @@ class NoteDiv extends Component {
 
 
     componentWillMount() {
-        fetch("http://localhost:3010/api/notes/" + this.props.match.params.id, {
+        fetch("/api/notes/" + this.props.match.params.id, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
 
@@ -34,7 +34,7 @@ class NoteDiv extends Component {
         });
 
 
-        fetch("http://localhost:3010/api/patient/" + this.props.match.params.id, {
+        fetch("/api/patient/" + this.props.match.params.id, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
 
@@ -51,7 +51,7 @@ class NoteDiv extends Component {
 
     deleteNotes = id => {
 
-        fetch("http://localhost:3010/api/notes/" + id, {
+        fetch("/api/notes/" + id, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' },
 
@@ -64,7 +64,7 @@ class NoteDiv extends Component {
 
     editNote = id => {
 
-        fetch("http://localhost:3010/api/notes/" + id, {
+        fetch("/api/notes/" + id, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

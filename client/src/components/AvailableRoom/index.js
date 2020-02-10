@@ -28,7 +28,7 @@ class AvailableRoom extends Component {
 
     
     componentDidMount() {
-        fetch("http://localhost:3010/api/room/", {
+        fetch("/api/room/", {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
 
@@ -39,7 +39,7 @@ class AvailableRoom extends Component {
             });
         });
 
-        fetch("http://localhost:3010/api/patient/", {
+        fetch("/api/patient/", {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
 
@@ -63,7 +63,7 @@ class AvailableRoom extends Component {
         console.log(this.state)
 
 
-        fetch("http://localhost:3010/api/room/", {
+        fetch("/api/room/", {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -73,7 +73,7 @@ class AvailableRoom extends Component {
 
         })
 
-        fetch("http://localhost:3010/api/patient/", {
+        fetch("/api/patient/", {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -89,7 +89,7 @@ class AvailableRoom extends Component {
 
     checkOut = (id, patid) => {
         console.log(id)
-        fetch("http://localhost:3010/api/room/", {
+        fetch("/api/room/", {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -99,7 +99,7 @@ class AvailableRoom extends Component {
 
         })
         console.log(patid)
-        fetch("http://localhost:3010/api/patient/", {
+        fetch("/api/patient/", {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

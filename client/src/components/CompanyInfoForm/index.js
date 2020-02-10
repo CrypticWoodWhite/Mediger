@@ -29,13 +29,9 @@ class CompanyInfoForm extends Component {
 
     const data = new FormData(event.target);
 
-    console.log(...data)
-
-
-    console.log(this.state)
-
-
-    fetch("http://localhost:3010/api/organization/", {
+    console.log("NEW COMPANY")
+    
+    fetch("/api/organization/", {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

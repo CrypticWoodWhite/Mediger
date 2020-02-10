@@ -16,7 +16,7 @@ require("dotenv").config();
 // Sets up the Express App
 // ================================================
 var app = express();
-var PORT = process.env.PORT || 3010;
+var PORT = 3010 || process.env.PORT;
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));

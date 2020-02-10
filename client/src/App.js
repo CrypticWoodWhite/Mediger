@@ -27,7 +27,6 @@ const App = () => {
   const { loading } = useAuth0();
 
   if (loading) {
-    console.log("LOADING")
     return <Loading />;
   }
 

@@ -68,7 +68,7 @@ class CompanyInfoForm extends Component {
         </Form.Group></Col>
             <Col>
             <Form.Group>
-          <Form.Label><strong>Contact </strong></Form.Label>
+          <Form.Label><strong>Phone number</strong></Form.Label>
           <Form.Control type="input" name="Phone_Number" onChange={this.handleInputChange} required pattern="^\d{10}$"/>
         </Form.Group></Col>
           </Form.Row>
